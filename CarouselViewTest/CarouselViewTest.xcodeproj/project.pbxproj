@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		523B827B17BFAC0700E2A27E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B827A17BFAC0700E2A27E /* UIKit.framework */; };
+		523B827D17BFAC0700E2A27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B827C17BFAC0700E2A27E /* Foundation.framework */; };
+		523B827F17BFAC0700E2A27E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B827E17BFAC0700E2A27E /* CoreGraphics.framework */; };
+		523B82BF17BFACAF00E2A27E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 523B82B517BFACAF00E2A27E /* InfoPlist.strings */; };
+		523B82C117BFACDA00E2A27E /* libCarouselView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B82C017BFACDA00E2A27E /* libCarouselView.a */; };
+		523B82C317BFACDF00E2A27E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B82C217BFACDF00E2A27E /* GLKit.framework */; };
+		523B82C517BFACEA00E2A27E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B82C417BFACEA00E2A27E /* QuartzCore.framework */; };
+		523B82C717BFACF000E2A27E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523B82C617BFACEF00E2A27E /* OpenGLES.framework */; };
+		523B82F717C0EF7A00E2A27E /* CarouselViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 523B82F617C0EF7A00E2A27E /* CarouselViewResources.bundle */; };
+		523B831617C119C900E2A27E /* dior00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830517C119C900E2A27E /* dior00.jpg */; };
+		523B831717C119C900E2A27E /* dior01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830617C119C900E2A27E /* dior01.jpg */; };
+		523B831817C119C900E2A27E /* dior02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830717C119C900E2A27E /* dior02.jpg */; };
+		523B831917C119C900E2A27E /* dior03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830817C119C900E2A27E /* dior03.jpg */; };
+		523B831A17C119C900E2A27E /* dior04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830917C119C900E2A27E /* dior04.jpg */; };
+		523B831B17C119C900E2A27E /* dior05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830A17C119C900E2A27E /* dior05.jpg */; };
+		523B831C17C119C900E2A27E /* dior06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830B17C119C900E2A27E /* dior06.jpg */; };
+		523B831D17C119C900E2A27E /* dior07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830C17C119C900E2A27E /* dior07.jpg */; };
+		523B831E17C119C900E2A27E /* dior08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830D17C119C900E2A27E /* dior08.jpg */; };
+		523B831F17C119C900E2A27E /* dior09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830E17C119C900E2A27E /* dior09.jpg */; };
+		523B832017C119C900E2A27E /* dior10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B830F17C119C900E2A27E /* dior10.jpg */; };
+		523B832117C119C900E2A27E /* dior11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831017C119C900E2A27E /* dior11.jpg */; };
+		523B832217C119C900E2A27E /* dior12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831117C119C900E2A27E /* dior12.jpg */; };
+		523B832317C119C900E2A27E /* dior13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831217C119C900E2A27E /* dior13.jpg */; };
+		523B832417C119C900E2A27E /* dior14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831317C119C900E2A27E /* dior14.jpg */; };
+		523B832517C119C900E2A27E /* dior15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831417C119C900E2A27E /* dior15.jpg */; };
+		523B832617C119C900E2A27E /* dior16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B831517C119C900E2A27E /* dior16.jpg */; };
+		523B833517C11A0F00E2A27E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B832C17C11A0F00E2A27E /* AppDelegate.m */; };
+		523B833617C11A0F00E2A27E /* AppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B832E17C11A0F00E2A27E /* AppFactory.m */; };
+		523B833717C11A0F00E2A27E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B832F17C11A0F00E2A27E /* main.m */; };
+		523B833817C11A0F00E2A27E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B833217C11A0F00E2A27E /* ViewController.m */; };
+		523B833917C11A0F00E2A27E /* ViewController~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523B833317C11A0F00E2A27E /* ViewController~iPad.xib */; };
+		523B833A17C11A0F00E2A27E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523B833417C11A0F00E2A27E /* ViewController.xib */; };
+		523B835617C11FB900E2A27E /* icon-iPad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B834E17C11FB900E2A27E /* icon-iPad.jpg */; };
+		523B835717C11FB900E2A27E /* icon-iPad@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B834F17C11FB900E2A27E /* icon-iPad@2x.jpg */; };
+		523B835817C11FB900E2A27E /* icon-iPhone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B835017C11FB900E2A27E /* icon-iPhone.jpg */; };
+		523B835917C11FB900E2A27E /* icon-iPhone@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523B835117C11FB900E2A27E /* icon-iPhone@2x.jpg */; };
+		523B835A17C11FB900E2A27E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 523B835317C11FB900E2A27E /* Default-568h@2x.png */; };
+		523B835B17C11FB900E2A27E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 523B835417C11FB900E2A27E /* Default.png */; };
+		523B835C17C11FB900E2A27E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 523B835517C11FB900E2A27E /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		523B827717BFAC0700E2A27E /* CarouselViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarouselViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B827A17BFAC0700E2A27E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		523B827C17BFAC0700E2A27E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		523B827E17BFAC0700E2A27E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		523B82B317BFACAF00E2A27E /* CarouselViewTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CarouselViewTest-Info.plist"; sourceTree = "<group>"; };
+		523B82B417BFACAF00E2A27E /* CarouselViewTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CarouselViewTest-Prefix.pch"; sourceTree = "<group>"; };
+		523B82B517BFACAF00E2A27E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		523B82C017BFACDA00E2A27E /* libCarouselView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCarouselView.a; path = "../Debug-iphonesimulator/libCarouselView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B82C217BFACDF00E2A27E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		523B82C417BFACEA00E2A27E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		523B82C617BFACEF00E2A27E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		523B82F617C0EF7A00E2A27E /* CarouselViewResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = CarouselViewResources.bundle; path = "../Debug-iphonesimulator/CarouselViewResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B830517C119C900E2A27E /* dior00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior00.jpg; sourceTree = "<group>"; };
+		523B830617C119C900E2A27E /* dior01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior01.jpg; sourceTree = "<group>"; };
+		523B830717C119C900E2A27E /* dior02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior02.jpg; sourceTree = "<group>"; };
+		523B830817C119C900E2A27E /* dior03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior03.jpg; sourceTree = "<group>"; };
+		523B830917C119C900E2A27E /* dior04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior04.jpg; sourceTree = "<group>"; };
+		523B830A17C119C900E2A27E /* dior05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior05.jpg; sourceTree = "<group>"; };
+		523B830B17C119C900E2A27E /* dior06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior06.jpg; sourceTree = "<group>"; };
+		523B830C17C119C900E2A27E /* dior07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior07.jpg; sourceTree = "<group>"; };
+		523B830D17C119C900E2A27E /* dior08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior08.jpg; sourceTree = "<group>"; };
+		523B830E17C119C900E2A27E /* dior09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior09.jpg; sourceTree = "<group>"; };
+		523B830F17C119C900E2A27E /* dior10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior10.jpg; sourceTree = "<group>"; };
+		523B831017C119C900E2A27E /* dior11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior11.jpg; sourceTree = "<group>"; };
+		523B831117C119C900E2A27E /* dior12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior12.jpg; sourceTree = "<group>"; };
+		523B831217C119C900E2A27E /* dior13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior13.jpg; sourceTree = "<group>"; };
+		523B831317C119C900E2A27E /* dior14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior14.jpg; sourceTree = "<group>"; };
+		523B831417C119C900E2A27E /* dior15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior15.jpg; sourceTree = "<group>"; };
+		523B831517C119C900E2A27E /* dior16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dior16.jpg; sourceTree = "<group>"; };
+		523B832B17C11A0F00E2A27E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		523B832C17C11A0F00E2A27E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		523B832D17C11A0F00E2A27E /* AppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFactory.h; sourceTree = "<group>"; };
+		523B832E17C11A0F00E2A27E /* AppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFactory.m; sourceTree = "<group>"; };
+		523B832F17C11A0F00E2A27E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		523B833117C11A0F00E2A27E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		523B833217C11A0F00E2A27E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		523B833317C11A0F00E2A27E /* ViewController~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ViewController~iPad.xib"; sourceTree = "<group>"; };
+		523B833417C11A0F00E2A27E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		523B834E17C11FB900E2A27E /* icon-iPad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "icon-iPad.jpg"; sourceTree = "<group>"; };
+		523B834F17C11FB900E2A27E /* icon-iPad@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "icon-iPad@2x.jpg"; sourceTree = "<group>"; };
+		523B835017C11FB900E2A27E /* icon-iPhone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "icon-iPhone.jpg"; sourceTree = "<group>"; };
+		523B835117C11FB900E2A27E /* icon-iPhone@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "icon-iPhone@2x.jpg"; sourceTree = "<group>"; };
+		523B835317C11FB900E2A27E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		523B835417C11FB900E2A27E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		523B835517C11FB900E2A27E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		523B827417BFAC0700E2A27E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B82C717BFACF000E2A27E /* OpenGLES.framework in Frameworks */,
+				523B82C517BFACEA00E2A27E /* QuartzCore.framework in Frameworks */,
+				523B82C317BFACDF00E2A27E /* GLKit.framework in Frameworks */,
+				523B82C117BFACDA00E2A27E /* libCarouselView.a in Frameworks */,
+				523B827B17BFAC0700E2A27E /* UIKit.framework in Frameworks */,
+				523B827D17BFAC0700E2A27E /* Foundation.framework in Frameworks */,
+				523B827F17BFAC0700E2A27E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		523B826E17BFAC0700E2A27E = {
+			isa = PBXGroup;
+			children = (
+				523B82AA17BFACAF00E2A27E /* Sources */,
+				523B82A617BFACAF00E2A27E /* Resource */,
+				523B82B217BFACAF00E2A27E /* Support */,
+				523B827917BFAC0700E2A27E /* Frameworks */,
+				523B827817BFAC0700E2A27E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		523B827817BFAC0700E2A27E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				523B827717BFAC0700E2A27E /* CarouselViewTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		523B827917BFAC0700E2A27E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				523B82F617C0EF7A00E2A27E /* CarouselViewResources.bundle */,
+				523B82C017BFACDA00E2A27E /* libCarouselView.a */,
+				523B82C617BFACEF00E2A27E /* OpenGLES.framework */,
+				523B82C417BFACEA00E2A27E /* QuartzCore.framework */,
+				523B82C217BFACDF00E2A27E /* GLKit.framework */,
+				523B827A17BFAC0700E2A27E /* UIKit.framework */,
+				523B827C17BFAC0700E2A27E /* Foundation.framework */,
+				523B827E17BFAC0700E2A27E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		523B82A617BFACAF00E2A27E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				523B834D17C11FB900E2A27E /* Icons */,
+				523B835217C11FB900E2A27E /* Launches */,
+				523B830417C119C900E2A27E /* Dior */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		523B82AA17BFACAF00E2A27E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				523B832A17C11A0F00E2A27E /* Application */,
+				523B833017C11A0F00E2A27E /* ViewController */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		523B82B217BFACAF00E2A27E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				523B82B317BFACAF00E2A27E /* CarouselViewTest-Info.plist */,
+				523B82B417BFACAF00E2A27E /* CarouselViewTest-Prefix.pch */,
+				523B82B517BFACAF00E2A27E /* InfoPlist.strings */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		523B830417C119C900E2A27E /* Dior */ = {
+			isa = PBXGroup;
+			children = (
+				523B830517C119C900E2A27E /* dior00.jpg */,
+				523B830617C119C900E2A27E /* dior01.jpg */,
+				523B830717C119C900E2A27E /* dior02.jpg */,
+				523B830817C119C900E2A27E /* dior03.jpg */,
+				523B830917C119C900E2A27E /* dior04.jpg */,
+				523B830A17C119C900E2A27E /* dior05.jpg */,
+				523B830B17C119C900E2A27E /* dior06.jpg */,
+				523B830C17C119C900E2A27E /* dior07.jpg */,
+				523B830D17C119C900E2A27E /* dior08.jpg */,
+				523B830E17C119C900E2A27E /* dior09.jpg */,
+				523B830F17C119C900E2A27E /* dior10.jpg */,
+				523B831017C119C900E2A27E /* dior11.jpg */,
+				523B831117C119C900E2A27E /* dior12.jpg */,
+				523B831217C119C900E2A27E /* dior13.jpg */,
+				523B831317C119C900E2A27E /* dior14.jpg */,
+				523B831417C119C900E2A27E /* dior15.jpg */,
+				523B831517C119C900E2A27E /* dior16.jpg */,
+			);
+			path = Dior;
+			sourceTree = "<group>";
+		};
+		523B832A17C11A0F00E2A27E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				523B832B17C11A0F00E2A27E /* AppDelegate.h */,
+				523B832C17C11A0F00E2A27E /* AppDelegate.m */,
+				523B832D17C11A0F00E2A27E /* AppFactory.h */,
+				523B832E17C11A0F00E2A27E /* AppFactory.m */,
+				523B832F17C11A0F00E2A27E /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		523B833017C11A0F00E2A27E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				523B833117C11A0F00E2A27E /* ViewController.h */,
+				523B833217C11A0F00E2A27E /* ViewController.m */,
+				523B833317C11A0F00E2A27E /* ViewController~iPad.xib */,
+				523B833417C11A0F00E2A27E /* ViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		523B834D17C11FB900E2A27E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				523B834E17C11FB900E2A27E /* icon-iPad.jpg */,
+				523B834F17C11FB900E2A27E /* icon-iPad@2x.jpg */,
+				523B835017C11FB900E2A27E /* icon-iPhone.jpg */,
+				523B835117C11FB900E2A27E /* icon-iPhone@2x.jpg */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		523B835217C11FB900E2A27E /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				523B835317C11FB900E2A27E /* Default-568h@2x.png */,
+				523B835417C11FB900E2A27E /* Default.png */,
+				523B835517C11FB900E2A27E /* Default@2x.png */,
+			);
+			path = Launches;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		523B827617BFAC0700E2A27E /* CarouselViewTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523B829D17BFAC0700E2A27E /* Build configuration list for PBXNativeTarget "CarouselViewTest" */;
+			buildPhases = (
+				523B827317BFAC0700E2A27E /* Sources */,
+				523B827417BFAC0700E2A27E /* Frameworks */,
+				523B827517BFAC0700E2A27E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarouselViewTest;
+			productName = CarouselViewTest;
+			productReference = 523B827717BFAC0700E2A27E /* CarouselViewTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		523B826F17BFAC0700E2A27E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Mind The App";
+			};
+			buildConfigurationList = 523B827217BFAC0700E2A27E /* Build configuration list for PBXProject "CarouselViewTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 523B826E17BFAC0700E2A27E;
+			productRefGroup = 523B827817BFAC0700E2A27E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				523B827617BFAC0700E2A27E /* CarouselViewTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		523B827517BFAC0700E2A27E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B82BF17BFACAF00E2A27E /* InfoPlist.strings in Resources */,
+				523B82F717C0EF7A00E2A27E /* CarouselViewResources.bundle in Resources */,
+				523B831617C119C900E2A27E /* dior00.jpg in Resources */,
+				523B831717C119C900E2A27E /* dior01.jpg in Resources */,
+				523B831817C119C900E2A27E /* dior02.jpg in Resources */,
+				523B831917C119C900E2A27E /* dior03.jpg in Resources */,
+				523B831A17C119C900E2A27E /* dior04.jpg in Resources */,
+				523B831B17C119C900E2A27E /* dior05.jpg in Resources */,
+				523B831C17C119C900E2A27E /* dior06.jpg in Resources */,
+				523B831D17C119C900E2A27E /* dior07.jpg in Resources */,
+				523B831E17C119C900E2A27E /* dior08.jpg in Resources */,
+				523B831F17C119C900E2A27E /* dior09.jpg in Resources */,
+				523B832017C119C900E2A27E /* dior10.jpg in Resources */,
+				523B832117C119C900E2A27E /* dior11.jpg in Resources */,
+				523B832217C119C900E2A27E /* dior12.jpg in Resources */,
+				523B832317C119C900E2A27E /* dior13.jpg in Resources */,
+				523B832417C119C900E2A27E /* dior14.jpg in Resources */,
+				523B832517C119C900E2A27E /* dior15.jpg in Resources */,
+				523B832617C119C900E2A27E /* dior16.jpg in Resources */,
+				523B833917C11A0F00E2A27E /* ViewController~iPad.xib in Resources */,
+				523B833A17C11A0F00E2A27E /* ViewController.xib in Resources */,
+				523B835617C11FB900E2A27E /* icon-iPad.jpg in Resources */,
+				523B835717C11FB900E2A27E /* icon-iPad@2x.jpg in Resources */,
+				523B835817C11FB900E2A27E /* icon-iPhone.jpg in Resources */,
+				523B835917C11FB900E2A27E /* icon-iPhone@2x.jpg in Resources */,
+				523B835A17C11FB900E2A27E /* Default-568h@2x.png in Resources */,
+				523B835B17C11FB900E2A27E /* Default.png in Resources */,
+				523B835C17C11FB900E2A27E /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		523B827317BFAC0700E2A27E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B833517C11A0F00E2A27E /* AppDelegate.m in Sources */,
+				523B833617C11A0F00E2A27E /* AppFactory.m in Sources */,
+				523B833717C11A0F00E2A27E /* main.m in Sources */,
+				523B833817C11A0F00E2A27E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		523B829B17BFAC0700E2A27E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../CarouselView/Sources/**";
+			};
+			name = Debug;
+		};
+		523B829C17BFAC0700E2A27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../CarouselView/Sources/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		523B829E17BFAC0700E2A27E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Support/CarouselViewTest-Prefix.pch";
+				INFOPLIST_FILE = "Support/CarouselViewTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CarouselView-eurubtxhbkufvwazoozjotbmtjys/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		523B829F17BFAC0700E2A27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Support/CarouselViewTest-Prefix.pch";
+				INFOPLIST_FILE = "Support/CarouselViewTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CarouselView-eurubtxhbkufvwazoozjotbmtjys/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		523B827217BFAC0700E2A27E /* Build configuration list for PBXProject "CarouselViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B829B17BFAC0700E2A27E /* Debug */,
+				523B829C17BFAC0700E2A27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523B829D17BFAC0700E2A27E /* Build configuration list for PBXNativeTarget "CarouselViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B829E17BFAC0700E2A27E /* Debug */,
+				523B829F17BFAC0700E2A27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 523B826F17BFAC0700E2A27E /* Project object */;
+}
