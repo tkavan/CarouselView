@@ -51,6 +51,7 @@ typedef struct {
 @implementation CarouselView
 @synthesize items;
 @synthesize angle, totalAngle, zoom, cyclic, radius, backgroundColor;
+@synthesize tick;
 @synthesize glContext, glView, program;
 @synthesize stripes;
 
@@ -214,6 +215,9 @@ typedef struct {
 }
 
 -(void)render:(CADisplayLink*)aLink {
+    if (self.tick) {
+        self.tick(aLink);
+    }
     [self.glView setNeedsDisplay];
 }
 
@@ -282,7 +286,7 @@ typedef struct {
     GLKMatrix4 projection = GLKMatrix4MakeFrustum(-2.f, 2.f, -h/2.f, h/2.f, CarouselViewNearPlane, CarouselViewFarPlane);
     glUniformMatrix4fv(self.projectionUniform, 1, 0, (GLfloat*)(&projection));
     
-    GLKMatrix4 modelView = GLKMatrix4MakeTranslation(0.f, 0.f, 0.f);
+    GLKMatrix4 modelView = GLKMatrix4MakeTranslation(0.f, 0.f, self.zoom*1.5f-0.5f);
     modelView = GLKMatrix4Rotate(modelView, self.angle, 0.f, 1.f, 0.f);
     for (MTACVDisplayStripe* stripe in self.stripes.stripes) {
         if ([self.stripes isStripeDisplayed:stripe]) {

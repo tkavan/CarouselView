@@ -14,6 +14,8 @@
 @property (nonatomic, assign) CGFloat itemMargin; // not yet implemented
 @property (nonatomic, strong) UIColor* backgroundColor; // not yet implemented
 
+@property (nonatomic, copy) void(^tick)(CADisplayLink* aDl);
+
 -(id)initWithFrame:(CGRect)aFrame radius:(CGFloat)aRadius;
 
 @end
