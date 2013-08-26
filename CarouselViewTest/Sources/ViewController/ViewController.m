@@ -3,7 +3,7 @@
 #import "TouchManager.h"
 #import "TouchManagerDelegate.h"
 
-CGFloat ViewControllerZoomTreshold = 500.f;
+CGFloat ViewControllerZoomTreshold = 900.f;
 
 #pragma mark - ViewController private interface
 
@@ -11,6 +11,7 @@ CGFloat ViewControllerZoomTreshold = 500.f;
 
 @property (nonatomic, strong) IBOutlet CarouselView* carouselView;
 @property (nonatomic, strong) TouchManager* touchManager;
+@property (nonatomic, strong) NSArray* items;
 
 -(CGFloat)carouselAngleWithDistance:(CGFloat)aDistance;
 -(CGFloat)carouselZoomWithVelocity:(CGFloat)aVelocity;
@@ -20,7 +21,7 @@ CGFloat ViewControllerZoomTreshold = 500.f;
 #pragma mark ViewController implementation
 
 @implementation ViewController
-@synthesize carouselView, touchManager;
+@synthesize carouselView, touchManager, items;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +42,8 @@ CGFloat ViewControllerZoomTreshold = 500.f;
         imageItem.backgroundColor = [UIColor blackColor];
         [arr addObject:imageItem];
     }
-    self.carouselView.items = arr;
+    self.items = [NSArray arrayWithArray:arr];
+    self.carouselView.items = self.items;
     self.carouselView.angle = M_PI_4;
     
     self.touchManager = [TouchManager touchManagerWithDelegate:self view:self.carouselView];
@@ -55,16 +57,13 @@ CGFloat ViewControllerZoomTreshold = 500.f;
     
 }
 
-#pragma mark - ViewCOntroller private methods
+#pragma mark - ViewController private methods
 
 -(CGFloat)carouselAngleWithDistance:(CGFloat)aDistance {
-    // TODO
     return aDistance*0.002f;
 }
 
 -(CGFloat)carouselZoomWithVelocity:(CGFloat)aVelocity {
-    // TODO - add impulse machine
-    
     aVelocity = ABS(aVelocity);
     aVelocity -= ViewControllerZoomTreshold;
     if (aVelocity < 0.f) {
@@ -89,7 +88,16 @@ CGFloat ViewControllerZoomTreshold = 500.f;
 }
 
 -(void)touchManager:(TouchManager*)aManager didOneTap:(CGPoint)aPosition {
-    // TODO
+    id<CarouselViewItem> item = [self.carouselView tapOnPoint:aPosition];
+    if (item) {
+        NSString* message = [NSString stringWithFormat:@"Item at index %i", [self.items indexOfObject:item]];
+        UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Item tapped"
+                                                     message:message
+                                                    delegate:nil
+                                           cancelButtonTitle:@"Ok"
+                                           otherButtonTitles:nil];
+        [av show];
+    }
 }
 
 @end

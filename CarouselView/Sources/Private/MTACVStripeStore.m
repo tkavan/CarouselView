@@ -6,9 +6,6 @@
 
 @interface MTACVStripeStore()
 
-@property (nonatomic, strong, readonly) NSMutableSet* prepared;
-@property (nonatomic, strong, readonly) NSMutableSet* displayed;
-
 @end
 
 #pragma mark - MTACVStripeStore implementation

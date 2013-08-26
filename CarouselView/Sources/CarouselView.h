@@ -18,4 +18,6 @@
 
 -(id)initWithFrame:(CGRect)aFrame radius:(CGFloat)aRadius;
 
+-(id<CarouselViewItem>)tapOnPoint:(CGPoint)aPoint;
+
 @end

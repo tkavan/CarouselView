@@ -8,6 +8,9 @@
 @property (nonatomic, strong, readonly) NSArray* stripes;
 @property (nonatomic, weak, readonly) CarouselView* carouselView;
 
+@property (nonatomic, strong, readonly) NSMutableSet* prepared;
+@property (nonatomic, strong, readonly) NSMutableSet* displayed;
+
 -(id)initWithStripes:(NSArray*)aStripes carouselView:(CarouselView*)aCarouselView;
 
 -(void)prepareStripe:(MTACVDisplayStripe*)aStripe;

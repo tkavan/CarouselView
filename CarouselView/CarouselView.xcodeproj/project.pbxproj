@@ -67,8 +67,8 @@
 		523B82E317C0EDC200E2A27E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		523B82EF17C0EDF200E2A27E /* CarouselViewResources-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CarouselViewResources-Info.plist"; sourceTree = "<group>"; };
 		523B82F017C0EDF200E2A27E /* CarouselViewResources-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CarouselViewResources-Prefix.pch"; sourceTree = "<group>"; };
-		523B82F217C0EE8300E2A27E /* Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fragment.glsl; sourceTree = "<group>"; };
-		523B82F317C0EE8300E2A27E /* Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vertex.glsl; sourceTree = "<group>"; };
+		523B82F217C0EE8300E2A27E /* Fragment.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Fragment.glsl; sourceTree = "<group>"; };
+		523B82F317C0EE8300E2A27E /* Vertex.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Vertex.glsl; sourceTree = "<group>"; };
 		523B82F817C0F2EE00E2A27E /* MTACVGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTACVGLProgram.h; sourceTree = "<group>"; };
 		523B82F917C0F2EE00E2A27E /* MTACVGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTACVGLProgram.m; sourceTree = "<group>"; };
 		523B82FA17C0F2EE00E2A27E /* MTACVGLShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTACVGLShader.h; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		523B82F117C0EE8300E2A27E /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				523B82F217C0EE8300E2A27E /* Fragment.glsl */,
 				523B82F317C0EE8300E2A27E /* Vertex.glsl */,
+				523B82F217C0EE8300E2A27E /* Fragment.glsl */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -451,6 +451,7 @@
 				523B82EE17C0EDC300E2A27E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

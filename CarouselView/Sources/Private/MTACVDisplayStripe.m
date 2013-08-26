@@ -31,7 +31,7 @@ typedef struct {
 
 @implementation MTACVDisplayStripe
 @synthesize angleSector, item, radius, glRaito;
-@synthesize positionSlot, texCoordSlot, colorUniform, textureUniform;
+@synthesize positionSlot, texCoordSlot, colorUniform, textureUniform, drawTypeUniform;
 @synthesize vertices, verticesLength, indices, indicesLength;
 @synthesize vertexBuffer, indexBuffer;
 
@@ -47,7 +47,7 @@ typedef struct {
 
 #pragma mark - MTACVDisplayStripe public methods
 
--(void)draw{
+-(void)draw:(MTACVDisplayStripeDrawType)aType {
     glBindBuffer(GL_ARRAY_BUFFER, self.vertexBuffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, self.indexBuffer);
     
@@ -58,9 +58,15 @@ typedef struct {
     }
     
     GLKVector4 colorVec = GLKVector4Make(1.f, 1.f, 1.f, 1.f);
-    if (![self.item.backgroundColor getRed:&colorVec.r green:&colorVec.g blue:&colorVec.b alpha:&colorVec.a]) {
-        //NSLog(@"Can't convert color");
+    GLint drawType = 1;
+    if (aType == MTACVDisplayStripeDrawSelect) {
+        drawType = 0;
+    } else {
+        if (![self.item.backgroundColor getRed:&colorVec.r green:&colorVec.g blue:&colorVec.b alpha:&colorVec.a]) {
+            //NSLog(@"Can't convert color");
+        }
     }
+    glUniform1i(self.drawTypeUniform, drawType);
     glUniform4fv(self.colorUniform, 1, (GLfloat*)&colorVec);
     
     glVertexAttribPointer( self.positionSlot

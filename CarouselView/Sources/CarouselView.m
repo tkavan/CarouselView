@@ -32,6 +32,7 @@ typedef struct {
 @property (nonatomic, assign) GLuint modelViewUniform;
 @property (nonatomic, assign) GLuint colorUniform;
 @property (nonatomic, assign) GLuint textureUniform;
+@property (nonatomic, assign) GLuint drawTypeUniform;
 
 @property (nonatomic, strong) MTACVStripeStore* stripes;
 
@@ -54,6 +55,8 @@ typedef struct {
 @synthesize tick;
 @synthesize glContext, glView, program;
 @synthesize stripes;
+@synthesize positionSlot, texCoordSlot, projectionUniform, modelViewUniform;
+@synthesize colorUniform, textureUniform, drawTypeUniform;
 
 #pragma mark - CarouselView init methods
 
@@ -96,6 +99,19 @@ typedef struct {
         @throw exception;
     }
     [self refreshStripes];
+}
+
+#pragma mark - CarouselView public methods
+
+-(id<CarouselViewItem>)tapOnPoint:(CGPoint)aPoint {
+    id<CarouselViewItem> touchedItem = nil;
+    for (MTACVDisplayStripe* stripe in self.stripes.displayed) {
+        if ([self trySelectItem:stripe atPoint:aPoint]) {
+            touchedItem = stripe.item;
+            break;
+        }
+    }
+    return touchedItem;
 }
 
 #pragma mark - CarouselView private methods
@@ -145,6 +161,7 @@ typedef struct {
     self.modelViewUniform = [self.program idForUniform:@"Modelview"];
     self.colorUniform = [self.program idForUniform:@"SourceColor"];
     self.textureUniform = [self.program idForUniform:@"Texture"];
+    self.drawTypeUniform = [self.program idForUniform:@"DisplayType"];
     
     glEnableVertexAttribArray(self.positionSlot);
     glEnableVertexAttribArray(self.texCoordSlot);
@@ -168,6 +185,7 @@ typedef struct {
             stripe.texCoordSlot = self.texCoordSlot;
             stripe.colorUniform = self.colorUniform;
             stripe.textureUniform = self.textureUniform;
+            stripe.drawTypeUniform = self.drawTypeUniform;
 
             stripe.item = item;
             [marr addObject:stripe];
@@ -206,6 +224,7 @@ typedef struct {
     return (MTACVInterval){self.angle - intervalAngle, self.angle + intervalAngle};
 }
 
+
 -(MTACVInterval)preparedInterval {
     float safety = M_PI_4;
     MTACVInterval interval = [self displayedInterval];
@@ -219,6 +238,42 @@ typedef struct {
         self.tick(aLink);
     }
     [self.glView setNeedsDisplay];
+}
+
+-(BOOL)trySelectItem:(MTACVDisplayStripe*)aStripe atPoint:(CGPoint)aPoint {
+    GLKVector4 vec = GLKVector4Make(0.f, 0.f, 0.f, 0.f);
+    [self.backgroundColor getRed:&vec.r green:&vec.g blue:&vec.b alpha:&vec.a];
+    glClearColor(vec.r, vec.g, vec.b, vec.a);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
+    
+    glViewport(0, 0, self.glView.frame.size.width, self.glView.frame.size.height);
+    
+    float h = 4.0f * self.glView.frame.size.height / self.glView.frame.size.width;
+    GLKMatrix4 projection = GLKMatrix4MakeFrustum(-2.f, 2.f, -h/2.f, h/2.f, CarouselViewNearPlane, CarouselViewFarPlane);
+    glUniformMatrix4fv(self.projectionUniform, 1, 0, (GLfloat*)(&projection));
+    
+    GLKMatrix4 modelView = GLKMatrix4MakeTranslation(0.f, 0.f, self.zoom*1.5f-0.5f);
+    modelView = GLKMatrix4Rotate(modelView, self.angle, 0.f, 1.f, 0.f);
+    for (MTACVDisplayStripe* stripe in self.stripes.stripes) {
+        if (stripe == aStripe) {
+            glUniformMatrix4fv(self.modelViewUniform, 1, 0, (GLfloat*)(&modelView));
+            [stripe draw:MTACVDisplayStripeDrawSelect];
+            break;
+        }
+        modelView = GLKMatrix4Rotate(modelView, -stripe.angleSector, 0.f, 1.f, 0.f);
+    }
+    
+    Byte pixelColor[4] = {0,};
+    CGFloat scale = UIScreen.mainScreen.scale;
+    glReadPixels( aPoint.x * scale
+                , self.glView.drawableHeight - (aPoint.y * scale)
+                , 1
+                , 1
+                , GL_RGBA, GL_UNSIGNED_BYTE
+                , pixelColor);
+    
+    return pixelColor[0] != 0;
 }
 
 #pragma mark - CarouselView accessor methods
@@ -291,7 +346,7 @@ typedef struct {
     for (MTACVDisplayStripe* stripe in self.stripes.stripes) {
         if ([self.stripes isStripeDisplayed:stripe]) {
             glUniformMatrix4fv(self.modelViewUniform, 1, 0, (GLfloat*)(&modelView));
-            [stripe draw];
+            [stripe draw:MTACVDisplayStripeDrawDisplay];
         }
         modelView = GLKMatrix4Rotate(modelView, -stripe.angleSector, 0.f, 1.f, 0.f);
     }
