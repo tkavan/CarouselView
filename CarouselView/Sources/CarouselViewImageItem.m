@@ -52,7 +52,7 @@
     NSLog(@"Loading: %@", self.path);
     [self.loader textureWithCGImage:self.image.CGImage
                             options:nil
-                              queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+                              queue:NULL
                   completionHandler: ^(GLKTextureInfo* aInfo, NSError* aErr) {
                       texture = aInfo;
                       if (aErr) {
